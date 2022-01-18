@@ -2,11 +2,11 @@ const venom = require('venom-bot')
 const venomOptions = require('./venom-options.js')
 
 var express = require('express');
-var app = express();
+// var app = express();
 
-app.get('/', function(req, res){
-  console.log(req.query.id)
-});
+// app.get('/', function(req, res){
+//   console.log(req.query.id)
+// });
 
 const TWENTY_MINUTES = 1200000
 let client = null
