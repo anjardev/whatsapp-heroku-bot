@@ -44,11 +44,13 @@ function startBot(_client) {
 }
 
 function reply(message) {
+    if (message.body === 'Hi' && message.isGroupMsg === false) {
 	const sender = message.from
 	dateLog(`Message received from: ${sender}`)
-	const replyText = 'Hi!'
+	const replyText = 'asdwer'
 	client.sendText(sender, replyText)
 	dateLog(`Message: "${replyText}" sent to: ${sender}`)
+	}
 }
 
 //
