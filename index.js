@@ -1,6 +1,13 @@
 const venom = require('venom-bot')
 const venomOptions = require('./venom-options.js')
 
+var express = require('express');
+var app = express();
+
+app.get('/', function(req, res){
+  console.log(req.query.id)
+});
+
 const TWENTY_MINUTES = 1200000
 let client = null
 
@@ -44,7 +51,7 @@ function startBot(_client) {
 }
 
 function reply(message) {
-    if (message.body === 'Hi' && message.isGroupMsg === false) {
+    if (message.body === 'Hi') {
 	const sender = message.from
 	dateLog(`Message received from: ${sender}`)
 	const replyText = 'asdwer'
